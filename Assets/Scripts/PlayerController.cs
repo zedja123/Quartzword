@@ -39,6 +39,7 @@ public class PlayerController : MonoBehaviour
         Flip();
         Animations();
         AddRemoveSword();
+        Attacking();
     }
 
     private void FixedUpdate()
@@ -81,6 +82,10 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonDown("Jump") && OnGround())
         {
             canJump = true;
+        }
+        if (Input.GetMouseButtonDown(0))
+        {
+            attacking = true;
         }
     }
 
@@ -171,5 +176,14 @@ public class PlayerController : MonoBehaviour
     public void Chave1Change()
     {
         chave1 = !chave1;
+    }
+
+    public void Attacking()
+    {
+        if (attacking)
+        {
+            anim.SetBool("Attacking", attacking);
+            attacking = false;
+        }
     }
 }
