@@ -9,7 +9,9 @@ public class PlayerController : MonoBehaviour
 
     public bool chave1;
 
-
+    public Transform attackPoint;
+    public float attackRange = 0.5f;
+    public LayerMask enemyLayers;
     public static PlayerController instance;
     [SerializeField] private Rigidbody rb;
     [SerializeField] private float speed;
@@ -83,7 +85,7 @@ public class PlayerController : MonoBehaviour
         {
             canJump = true;
         }
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && canAttack)
         {
             attacking = true;
         }
@@ -184,6 +186,12 @@ public class PlayerController : MonoBehaviour
         {
             anim.SetBool("Attacking", attacking);
             attacking = false;
+            Collider[] hitEnemies = Physics.OverlapSphere(attackPoint.position, attackRange, enemyLayers);
+
+            foreach(Collider enemy in hitEnemies)
+            {
+                Debug.Log("Hit");
+            }
         }
     }
 }

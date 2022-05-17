@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: bc4eb54b04d5aab49b0c3b2d95ada64e
+guid: eae2c655f18e50547abf9e3aeb40455c
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable:
   - first:
       74: -203655887218126122
+    second: T-Pose@Stable Sword Outward Slash (1)
+  - first:
+      74: 2444573510131929339
     second: T-Pose@Stable Sword Outward Slash
   externalObjects: {}
   materials:
@@ -39,7 +42,7 @@ ModelImporter:
       takeName: mixamo.com
       internalID: 0
       firstFrame: 0
-      lastFrame: 37
+      lastFrame: 61
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
