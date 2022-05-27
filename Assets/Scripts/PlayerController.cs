@@ -20,7 +20,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float groundDistance;
     [SerializeField] private Animator anim;
     [SerializeField] private GameObject espada;
-    public States currentState;
 
 
     private float z;
@@ -54,12 +53,6 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    public enum States
-    {
-        Talking,
-        Exploring,
-        Pause
-    }
     void Flip()
     {
         if (z > 0 && lookingLeft)
@@ -151,25 +144,6 @@ public class PlayerController : MonoBehaviour
         canMove = true;
     }
 
-    public void ChangeState(States _state)
-    {
-        currentState = _state;
-        switch (currentState)
-        {
-            case States.Talking:
-                canMove = false;
-                break;
-
-            case States.Exploring:
-                canMove = true;
-                break;
-
-            case States.Pause:
-                canMove = false;
-                break;
-
-        }
-    }
     public void LoadDeathMenu()
     {
         MenuController.instance.LoadDeathMenu();
@@ -186,12 +160,19 @@ public class PlayerController : MonoBehaviour
         {
             anim.SetBool("Attacking", attacking);
             attacking = false;
-            Collider[] hitEnemies = Physics.OverlapSphere(attackPoint.position, attackRange, enemyLayers);
-
-            foreach(Collider enemy in hitEnemies)
-            {
-                Debug.Log("Hit");
-            }
+            StartCoroutine(AttackPointCalculator());
         }
+    }
+
+    public IEnumerator AttackPointCalculator()
+    {
+        yield return new WaitForSeconds(0.33f);
+        Collider[] hitEnemies = Physics.OverlapSphere(attackPoint.position, attackRange, enemyLayers);
+
+        foreach (Collider enemy in hitEnemies)
+        {
+            Debug.Log("Hit");
+        }
+
     }
 }
