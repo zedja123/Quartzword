@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
     public bool chave1;
 
     public Transform attackPoint;
-    public float attackRange = 0.5f;
+    public float attackRange = 2f;
     public LayerMask enemyLayers;
     public static PlayerController instance;
     [SerializeField] private Rigidbody rb;

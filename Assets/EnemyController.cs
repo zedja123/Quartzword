@@ -9,21 +9,82 @@ public class EnemyController : MonoBehaviour
     public Transform objectToFollow;
     [SerializeField] public  Animator anim;
     [SerializeField] public NavMeshAgent nma;
+    public float viewDistance = 10f;
+    public float attackRange = 2f;
+    public GameObject patrollPoint1;
+    public GameObject patrollPoint2;
+    public Transform[] waypoints;
+    private int waypointIndex;
+    private float waypointDistance;
+    public float nextAttackTime = 0;
+    public float attackCooldown = 2;
+
 
     void Start()
     {
-        
+        waypointIndex = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
-        nma.destination = objectToFollow.position;
-        Movement();
+        float dist = Vector3.Distance(transform.position, objectToFollow.position);
+        if(dist <= 10f)
+        {  
+            if (dist <= 2f)
+            {
+                if (Time.time >= nextAttackTime)
+                {
+                    Attack();
+                    print("atacando");
+                    nextAttackTime = Time.time + attackCooldown;
+                }
+
+            }
+            else
+            {
+                MoveToPlayer();
+            }
+        }
+        else
+        {
+            Patrol();
+        }
+
+        
     }
 
+    public void MoveToPlayer()
+    {
+        nma.destination = objectToFollow.position;
+    }
     public void Movement()
     {
         anim.SetFloat("Speed", nma.velocity.magnitude);
+    }
+
+    public void Attack()
+    {
+
+    }
+
+    public void Patrol()
+    {
+        waypointDistance = Vector3.Distance(transform.position, waypoints[waypointIndex].position);
+        if(waypointDistance < 1f)
+        {
+            IncreaseIndex();
+        }
+        nma.destination = waypoints[waypointIndex].position;
+        Movement();
+    }
+
+    void IncreaseIndex()
+    {
+        waypointIndex++;
+        if(waypointIndex >= waypoints.Length)
+        {
+            waypointIndex = 0;
+        }
     }
 }
