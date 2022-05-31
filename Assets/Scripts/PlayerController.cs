@@ -30,9 +30,21 @@ public class PlayerController : MonoBehaviour
     public bool canAttack;
     [SerializeField] public bool canMove;
 
+    public int swordDamage = 4;
+    public float maxLife = 20;
+    public float currentLife;
+    public float nextAttackTime;
+    public float attackCooldown;
+
+    public Image healthBar;
+
     private void Awake()
     {
         instance = this;
+    }
+    private void Start()
+    {
+        currentLife = maxLife;
     }
     private void Update()
     {
@@ -41,6 +53,7 @@ public class PlayerController : MonoBehaviour
         Animations();
         AddRemoveSword();
         Attacking();
+        healthBar.fillAmount = currentLife / maxLife;
     }
 
     private void FixedUpdate()
@@ -80,7 +93,12 @@ public class PlayerController : MonoBehaviour
         }
         if (Input.GetMouseButtonDown(0) && canAttack)
         {
-            attacking = true;
+            if (Time.time >= nextAttackTime)
+            {
+                attacking = true;
+                nextAttackTime = Time.time + attackCooldown;
+            }
+            
         }
     }
 
@@ -158,9 +176,10 @@ public class PlayerController : MonoBehaviour
     {
         if (attacking)
         {
-            anim.SetBool("Attacking", attacking);
-            attacking = false;
-            StartCoroutine(AttackPointCalculator());
+                anim.SetBool("Attacking", attacking);
+                attacking = false;
+                StartCoroutine(AttackPointCalculator());
+
         }
     }
 
@@ -172,7 +191,18 @@ public class PlayerController : MonoBehaviour
         foreach (Collider enemy in hitEnemies)
         {
             Debug.Log("Hit");
+            enemy.GetComponent<EnemyController>().TakeDamage(swordDamage);
         }
 
+    }
+
+    public void TakeDamage(int damage)
+    {
+        currentLife -= damage;
+
+        if (currentLife <= 0)
+        {
+            MenuController.instance.LoadDeathMenu();
+        }
     }
 }
