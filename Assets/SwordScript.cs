@@ -4,56 +4,59 @@ using UnityEngine;
 
 public class SwordScript : MonoBehaviour
 {
-
     public static SwordScript instance;
-    Vector3 destino;
-    public float velocidade = 4f;
-    [SerializeField] public Transform swordLocation;
+    public Transform destination;
     public Rigidbody rb;
-    [SerializeField] public Camera mainCamera;
-    // Start is called before the first frame update
-
+    [SerializeField] private float velocity;
+    private Vector3 movement;
     private void Awake()
     {
         instance = this;
     }
-    void Start()
+    private void Start()
     {
-        destino = swordLocation.position;
+        
     }
 
+    private void Update()
+    {
+        MoveToDestination();
+    }
     private void FixedUpdate()
     {
-        float distancia = Vector3.Distance(transform.position, destino);
-        if(distancia < 0.2f)
+        rb.velocity = movement;
+    }
+
+    void MoveToDestination()
+    {
+        float distance = Vector3.Distance(transform.position, destination.position);
+        if(Mathf.Abs(distance) > 0.1f)
         {
-            rb.velocity = Vector3.zero;
+            transform.LookAt(destination);
+            transform.SetParent(null);
+            //transform.rotation = Quaternion.Euler(Vector3.zero);
+            Vector3 direction = destination.position - transform.position;
+            direction = direction.normalized;
+            movement = direction * velocity;
         }
         else
         {
-            Vector3 direcao = destino - transform.position;
-            rb.velocity = direcao.normalized * velocidade;
+            movement = Vector3.zero;
+            if (destination == PlayerController.instance.SwordLocation)
+            {
+                transform.SetParent(destination);
+                transform.localPosition = Vector3.zero;
+                transform.localRotation = Quaternion.Euler(Vector3.zero);
+            }
+                
+            
+            
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void ChangeDestination(Transform _newDestination)
     {
-        ChangeDestino();
-        Debug.Log(mainCamera.ScreenToWorldPoint(Input.mousePosition));
-    }
-
-    public void ChangeDestino()
-    {
-        if (Input.GetMouseButtonDown(1))
-        {
-            print("chamou clique");
-            Vector3 mouseWorldPosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
-            mouseWorldPosition.z = 90;
-            destino = mouseWorldPosition;
-            Vector3 direcao = destino - transform.position;
-            rb.velocity = direcao.normalized * velocidade;
-        }
-
+        transform.SetParent(null);
+        destination = _newDestination;
     }
 }

@@ -20,6 +20,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float groundDistance;
     [SerializeField] private Animator anim;
     [SerializeField] private GameObject espada;
+    [SerializeField] LayerMask destinationLayer;
+    [SerializeField] Transform destination;
+    public Transform SwordLocation;
 
 
     private float z;
@@ -44,6 +47,7 @@ public class PlayerController : MonoBehaviour
     }
     private void Start()
     {
+        SwordScript.instance.ChangeDestination(SwordLocation);
         currentLife = maxLife;
     }
     private void Update()
@@ -51,17 +55,18 @@ public class PlayerController : MonoBehaviour
         Inputs();
         Flip();
         Animations();
-        AddRemoveSword();
+        //AddRemoveSword();
         Attacking();
         healthBar.fillAmount = currentLife / maxLife;
+
     }
 
     private void FixedUpdate()
     {
         if (canMove)
         {
-        Movement();
-        Jump();
+            Movement();
+            Jump();
         }
 
     }
@@ -98,13 +103,23 @@ public class PlayerController : MonoBehaviour
                 attacking = true;
                 nextAttackTime = Time.time + attackCooldown;
             }
-            
+
+        }
+
+        if (Input.GetMouseButtonDown(1))
+        {
+            MoveSword();
+        }
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            SwordScript.instance.ChangeDestination(SwordLocation);
+            canAttack = true;
         }
     }
 
     void Movement()
     {
-        rb.velocity = new Vector3(0f , rb.velocity.y, z * speed);
+        rb.velocity = new Vector3(0f, rb.velocity.y, z * speed);
 
     }
 
@@ -126,13 +141,13 @@ public class PlayerController : MonoBehaviour
 
     void Animations()
     {
-        anim.SetFloat("Speed",Mathf.Abs(z));
+        anim.SetFloat("Speed", Mathf.Abs(z));
         anim.SetBool("IsMoving", rb.velocity.z != 0);
         anim.SetBool("OnGround", OnGround());
         anim.SetBool("Attacking", attacking);
     }
 
-    void AddRemoveSword()
+/*    void AddRemoveSword()
     {
         if (canAttack)
         {
@@ -143,7 +158,7 @@ public class PlayerController : MonoBehaviour
             espada.SetActive(false);
         }
     }
-
+*/
     public void CanAttackChange()
     {
         canAttack = !canAttack;
@@ -176,9 +191,9 @@ public class PlayerController : MonoBehaviour
     {
         if (attacking)
         {
-                anim.SetBool("Attacking", attacking);
-                attacking = false;
-                StartCoroutine(AttackPointCalculator());
+            anim.SetBool("Attacking", attacking);
+            attacking = false;
+            StartCoroutine(AttackPointCalculator());
 
         }
     }
@@ -203,6 +218,20 @@ public class PlayerController : MonoBehaviour
         if (currentLife <= 0)
         {
             MenuController.instance.LoadDeathMenu();
+        }
+    }
+
+    public void MoveSword()
+    {
+        RaycastHit hit;
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+        if (Physics.Raycast(ray, out hit, 100f, destinationLayer))
+        {
+            Debug.Log(hit.point);
+            destination.position = hit.point;
+            SwordScript.instance.ChangeDestination(destination);
+            canAttack = false;
         }
     }
 }
