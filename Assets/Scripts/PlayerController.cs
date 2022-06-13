@@ -41,6 +41,10 @@ public class PlayerController : MonoBehaviour
 
     public Image healthBar;
 
+    public bool swordFlying;
+    public bool swordAttacking;
+    public Transform swordAttackPoint;
+
     private void Awake()
     {
         instance = this;
@@ -57,6 +61,7 @@ public class PlayerController : MonoBehaviour
         Animations();
         //AddRemoveSword();
         Attacking();
+        SwordAttacking();
         healthBar.fillAmount = currentLife / maxLife;
 
     }
@@ -96,7 +101,7 @@ public class PlayerController : MonoBehaviour
         {
             canJump = true;
         }
-        if (Input.GetMouseButtonDown(0) && canAttack)
+        if (Input.GetMouseButtonDown(0) && canAttack && swordFlying == false)
         {
             if (Time.time >= nextAttackTime)
             {
@@ -105,15 +110,27 @@ public class PlayerController : MonoBehaviour
             }
 
         }
+        if (Input.GetMouseButtonDown(0) && canAttack == false && swordFlying)
+        {
+            if (Time.time >= nextAttackTime)
+            {
+                swordAttacking = true;
+                nextAttackTime = Time.time + attackCooldown;
+            }
+        }
 
         if (Input.GetMouseButtonDown(1))
         {
             MoveSword();
+            swordFlying = true;
         }
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
             SwordScript.instance.ChangeDestination(SwordLocation);
             canAttack = true;
+            swordFlying = false;
+            SwordScript.instance.anim.enabled = false;
+
         }
     }
 
@@ -147,18 +164,18 @@ public class PlayerController : MonoBehaviour
         anim.SetBool("Attacking", attacking);
     }
 
-/*    void AddRemoveSword()
-    {
-        if (canAttack)
+    /*    void AddRemoveSword()
         {
-            espada.SetActive(true);
+            if (canAttack)
+            {
+                espada.SetActive(true);
+            }
+            else
+            {
+                espada.SetActive(false);
+            }
         }
-        else
-        {
-            espada.SetActive(false);
-        }
-    }
-*/
+    */
     public void CanAttackChange()
     {
         canAttack = !canAttack;
@@ -196,6 +213,31 @@ public class PlayerController : MonoBehaviour
             StartCoroutine(AttackPointCalculator());
 
         }
+    }
+
+    public void SwordAttacking()
+    {
+        if (swordAttacking)
+        {
+            SwordScript.instance.anim.enabled = true;
+            SwordScript.instance.anim.SetFloat("Blend", 1);
+            swordAttacking = false;
+            StartCoroutine(SwordAttackPointCalculator());
+
+        }
+    }
+    public IEnumerator SwordAttackPointCalculator()
+    {
+        yield return new WaitForSeconds(0.33f);
+        Collider[] hitEnemies = Physics.OverlapSphere(swordAttackPoint.position, attackRange, enemyLayers);
+
+        SwordScript.instance.anim.SetFloat("Blend", 0);
+        foreach (Collider enemy in hitEnemies)
+        {
+            Debug.Log("Hit");
+            enemy.GetComponent<EnemyController>().TakeDamage(swordDamage);
+        }
+
     }
 
     public IEnumerator AttackPointCalculator()

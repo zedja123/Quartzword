@@ -9,13 +9,14 @@ public class SwordScript : MonoBehaviour
     public Rigidbody rb;
     [SerializeField] private float velocity;
     private Vector3 movement;
+    public Animator anim;
     private void Awake()
     {
         instance = this;
     }
     private void Start()
     {
-        
+        anim.enabled = false;
     }
 
     private void Update()
@@ -30,7 +31,7 @@ public class SwordScript : MonoBehaviour
     void MoveToDestination()
     {
         float distance = Vector3.Distance(transform.position, destination.position);
-        if(Mathf.Abs(distance) > 0.1f)
+        if(Mathf.Abs(distance) > 0.3f)
         {
             transform.LookAt(destination);
             transform.SetParent(null);
