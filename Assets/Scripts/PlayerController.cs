@@ -235,7 +235,8 @@ public class PlayerController : MonoBehaviour
         foreach (Collider enemy in hitEnemies)
         {
             Debug.Log("Hit");
-            enemy.GetComponent<EnemyController>().TakeDamage(swordDamage);
+            enemy.GetComponent<DamageCalc>().TakeDamage(swordDamage);
+
         }
 
     }
@@ -248,7 +249,7 @@ public class PlayerController : MonoBehaviour
         foreach (Collider enemy in hitEnemies)
         {
             Debug.Log("Hit");
-            enemy.GetComponent<EnemyController>().TakeDamage(swordDamage);
+            enemy.GetComponent<DamageCalc>().TakeDamage(swordDamage);
         }
 
     }

@@ -11,9 +11,12 @@ public class Balista : MonoBehaviour
 
     float fireRate;
     float nextFire;
+
+    public float currentLife;
     // Start is called before the first frame update
     void Start()
     {
+        currentLife = 20;
         fireRate = 2f;
         nextFire = Time.time;
     }
@@ -36,4 +39,5 @@ public class Balista : MonoBehaviour
             nextFire = Time.time + fireRate;
         }
     }
+
 }

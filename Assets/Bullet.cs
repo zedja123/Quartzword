@@ -26,7 +26,6 @@ public class Bullet : MonoBehaviour
     {
         if (collision.gameObject.name.Equals("PlayerFinal"))
         {
-            print("hit");
             collision.gameObject.GetComponent<PlayerController>().TakeDamage(2);
             Destroy(gameObject);
         }
