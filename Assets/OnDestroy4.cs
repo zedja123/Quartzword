@@ -19,5 +19,6 @@ public class OnDestroy4 : MonoBehaviour
     private void OnDestroy()
     {
         Destroy(barreira);
+
     }
 }
