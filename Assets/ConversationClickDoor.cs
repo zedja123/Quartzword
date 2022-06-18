@@ -13,16 +13,12 @@ public class ConversationClickDoor : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            if (PlayerController.instance.canMove == true && PlayerController.instance.chave1 == false)
+            if (PlayerController.instance.chave1 == false)
             {
                 ConversationManager.Instance.StartConversation(semChave);
-                PlayerController.instance.canMove = false;
-                PlayerController.instance.canAttack = false;
-            }else if(PlayerController.instance.canMove == true && PlayerController.instance.chave1 == true) {
+            }else if(PlayerController.instance.chave1 == true) {
                 ConversationManager.Instance.StartConversation(comChave);
-                PlayerController.instance.canMove = false;
-                PlayerController.instance.canAttack = false;
-                anim.SetBool("Open", true);
+                Destroy(gameObject);
             }
         }
     }

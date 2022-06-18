@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OnDestroy4 : MonoBehaviour
+public class OnDestroy5 : MonoBehaviour
 {
-    public GameObject barreira;
+
     public OpenDoor door;
     // Start is called before the first frame update
     void Start()
@@ -17,10 +17,9 @@ public class OnDestroy4 : MonoBehaviour
     {
         
     }
+
     private void OnDestroy()
     {
-        Destroy(barreira);
         door.OpenDoor1();
-
     }
 }

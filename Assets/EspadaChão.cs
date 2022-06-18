@@ -11,12 +11,7 @@ public class EspadaChão : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            if (PlayerController.instance.canMove == true)
-            {
-                ConversationManager.Instance.StartConversation(myConversation);
-                PlayerController.instance.canMove = false;
-                PlayerController.instance.canAttack = false;
-            }
+            ConversationManager.Instance.StartConversation(myConversation);
         }
     }
 }

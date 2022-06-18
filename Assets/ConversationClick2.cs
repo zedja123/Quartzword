@@ -3,18 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using DialogueEditor;
 
-
-public class ConversationClick : MonoBehaviour
+public class ConversationClick2 : MonoBehaviour
 {
     public NPCConversation myConversation;
 
     private void OnMouseOver()
     {
-        print("onmouseover");
         if (Input.GetMouseButtonDown(0))
         {
-            print("mousebuttondown");
-            ConversationManager.Instance.StartConversation(myConversation);
+                ConversationManager.Instance.StartConversation(myConversation);
         }
     }
 }

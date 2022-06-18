@@ -306,11 +306,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5632453092301348261, guid: 1ea49e5df64c8dc45abf88db459685d8, type: 3}
       propertyPath: m_ReferenceResolution.x
-      value: 1920
+      value: 1280
       objectReference: {fileID: 0}
     - target: {fileID: 5632453092301348261, guid: 1ea49e5df64c8dc45abf88db459685d8, type: 3}
       propertyPath: m_ReferenceResolution.y
-      value: 1080
+      value: 720
       objectReference: {fileID: 0}
     - target: {fileID: 5632453092390158272, guid: 1ea49e5df64c8dc45abf88db459685d8, type: 3}
       propertyPath: cameraMenu

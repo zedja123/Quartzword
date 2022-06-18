@@ -13,15 +13,12 @@ public class OpenDoor : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            if (PlayerController.instance.canMove == true)
-            {
                 ConversationManager.Instance.StartConversation(myConversation);
-            }
         }
     }
 
     public void OpenDoor1()
     {
-        anim.SetBool("Open", true);
+        Destroy(gameObject);
     }
 }
