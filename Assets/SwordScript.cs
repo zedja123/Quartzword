@@ -10,6 +10,7 @@ public class SwordScript : MonoBehaviour
     [SerializeField] private float velocity;
     private Vector3 movement;
     public Animator anim;
+    public AudioSource flight;
     private void Awake()
     {
         instance = this;
@@ -39,6 +40,7 @@ public class SwordScript : MonoBehaviour
             Vector3 direction = destination.position - transform.position;
             direction = direction.normalized;
             movement = direction * velocity;
+            
         }
         else
         {
@@ -59,5 +61,11 @@ public class SwordScript : MonoBehaviour
     {
         transform.SetParent(null);
         destination = _newDestination;
+        FlightSound();
+    }
+
+    public void FlightSound()
+    {
+        flight.Play();
     }
 }

@@ -44,6 +44,9 @@ public class PlayerController : MonoBehaviour
     public bool swordFlying;
     public bool swordAttacking;
     public Transform swordAttackPoint;
+    public AudioSource slash;
+    public AudioSource die;
+    public AudioSource jump;
 
     private void Awake()
     {
@@ -144,6 +147,7 @@ public class PlayerController : MonoBehaviour
     {
         if (canJump)
         {
+            JumpSound();
             rb.AddForce(Vector3.up * jumpPower);
             anim.SetTrigger("Jump");
             canJump = false;
@@ -208,6 +212,7 @@ public class PlayerController : MonoBehaviour
     {
         if (attacking)
         {
+            
             anim.SetBool("Attacking", attacking);
             attacking = false;
             StartCoroutine(AttackPointCalculator());
@@ -219,6 +224,7 @@ public class PlayerController : MonoBehaviour
     {
         if (swordAttacking)
         {
+            SlashSound();
             SwordScript.instance.anim.enabled = true;
             SwordScript.instance.anim.SetFloat("Blend", 1);
             swordAttacking = false;
@@ -245,7 +251,7 @@ public class PlayerController : MonoBehaviour
     {
         yield return new WaitForSeconds(0.33f);
         Collider[] hitEnemies = Physics.OverlapSphere(attackPoint.position, attackRange, enemyLayers);
-
+        SlashSound();
         foreach (Collider enemy in hitEnemies)
         {
             Debug.Log("Hit");
@@ -261,6 +267,7 @@ public class PlayerController : MonoBehaviour
         if (currentLife <= 0)
         {
             MenuController.instance.LoadDeathMenu();
+            DieSound();
         }
     }
 
@@ -276,5 +283,20 @@ public class PlayerController : MonoBehaviour
             SwordScript.instance.ChangeDestination(destination);
             canAttack = false;
         }
+    }
+
+    public void SlashSound()
+    {
+        slash.Play();
+    }
+
+    public void DieSound()
+    {
+        die.Play();
+    }
+
+    public void JumpSound()
+    {
+        jump.Play();
     }
 }

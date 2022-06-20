@@ -40,8 +40,8 @@ public class CameraFollow : MonoBehaviour
 	private void Update()
 	{
 		Vector3 newPosition = Target.position;
-		newPosition.x = -8f;
-		newPosition.y += 4.5f;
+		newPosition.x = 14f;
+		newPosition.y += 3f;
 		transform.position = Vector3.Slerp(transform.position, newPosition, FollowSpeed * Time.deltaTime);
 
 		if (shakeDuration > 0)

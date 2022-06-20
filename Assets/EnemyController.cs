@@ -94,15 +94,6 @@ public class EnemyController : MonoBehaviour
         }
     }
 
-    public void TakeDamage(int damage)
-    {
-        currentLife -= damage;
-        print(currentLife);
-        if(currentLife <= 0)
-        {
-            Destroy(this.gameObject);
-        }
-    }
     public IEnumerator AttackPointCalculator()
     {
         yield return new WaitForSeconds(1f);

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DamageCalc : MonoBehaviour
 {
-
+    public AudioSource hit;
     public float currentLife;
     // Start is called before the first frame update
     void Start()
@@ -20,6 +20,7 @@ public class DamageCalc : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        hit.Play();
         currentLife -= damage;
         print(currentLife);
         if (currentLife <= 0)

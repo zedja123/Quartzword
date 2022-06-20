@@ -8,6 +8,7 @@ public class Balista : MonoBehaviour
     [SerializeField] public GameObject bullet;
     [SerializeField] public Transform firePoint;
     [SerializeField]public Transform target;
+    public AudioSource shoot;
 
     float fireRate;
     float nextFire;
@@ -35,6 +36,7 @@ public class Balista : MonoBehaviour
     {
         if (Time.time > nextFire)
         {
+            shoot.Play();
             Instantiate(bullet, firePoint.position, Quaternion.identity);
             nextFire = Time.time + fireRate;
         }
