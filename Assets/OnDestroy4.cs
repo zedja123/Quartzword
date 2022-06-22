@@ -6,6 +6,7 @@ public class OnDestroy4 : MonoBehaviour
 {
     public GameObject barreira;
     public OpenDoor door;
+    public DamageCalc damageCalc;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,12 +16,12 @@ public class OnDestroy4 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-    }
-    private void OnDestroy()
-    {
-        Destroy(barreira);
-        door.OpenDoor1();
-
+        if (damageCalc.dead == true)
+        {
+            PZ3.instance.balista2 = true;
+            PZ3.instance.PZ3Open();
+            Destroy(barreira);
+            door.OpenDoor1();
+        }
     }
 }

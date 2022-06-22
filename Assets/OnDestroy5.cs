@@ -6,6 +6,7 @@ public class OnDestroy5 : MonoBehaviour
 {
 
     public OpenDoor door;
+    public DamageCalc damageCalc;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,11 +16,10 @@ public class OnDestroy5 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (damageCalc.dead == true)
+        {
+            door.OpenDoor1();
+        }
     }
 
-    private void OnDestroy()
-    {
-        door.OpenDoor1();
-    }
 }

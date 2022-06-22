@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class OnDestroy6 : MonoBehaviour
 {
+    public DamageCalc damageCalc;
     // Start is called before the first frame update
     void Start()
     {
@@ -13,11 +14,10 @@ public class OnDestroy6 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (damageCalc.dead == true)
+        {
+            PZ6.instance.PZ6Open();
+        }
     }
 
-    private void OnDestroy()
-    {
-        PZ6.instance.PZ6Open();
-    }
 }

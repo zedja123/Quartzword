@@ -5,7 +5,10 @@ using UnityEngine;
 public class DamageCalc : MonoBehaviour
 {
     public AudioSource hit;
+    public Animator anim;
+    public Collider col;
     public float currentLife;
+    public bool dead;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +28,9 @@ public class DamageCalc : MonoBehaviour
         print(currentLife);
         if (currentLife <= 0)
         {
-            Destroy(this.gameObject);
+            dead = true;
+            anim.SetTrigger("Dead");
+            col.enabled = false;
         }
     }
 }

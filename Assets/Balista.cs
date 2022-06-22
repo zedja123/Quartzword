@@ -9,6 +9,7 @@ public class Balista : MonoBehaviour
     [SerializeField] public Transform firePoint;
     [SerializeField]public Transform target;
     public AudioSource shoot;
+    public DamageCalc damageCalc;
 
     float fireRate;
     float nextFire;
@@ -25,11 +26,15 @@ public class Balista : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float dist = Vector3.Distance(transform.position, target.position);
-        if (dist <= 20f)
+        if(damageCalc.dead == false)
         {
-            CheckTimeToFire();
+            float dist = Vector3.Distance(transform.position, target.position);
+            if (dist <= 20f)
+            {
+                CheckTimeToFire();
+            }
         }
+
     }
 
     void CheckTimeToFire()

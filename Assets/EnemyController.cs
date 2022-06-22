@@ -23,6 +23,7 @@ public class EnemyController : MonoBehaviour
     public float attackRange;
     public float maxLife = 20;
     public float currentLife;
+    public DamageCalc damageCalc;
 
     void Start()
     {
@@ -33,28 +34,32 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float dist = Vector3.Distance(transform.position, objectToFollow.position);
-        if(dist <= 10f)
-        {  
-            if (dist <= 3f)
+        if(damageCalc.dead == false)
+        {
+            float dist = Vector3.Distance(transform.position, objectToFollow.position);
+            if (dist <= 10f)
             {
-                if (Time.time >= nextAttackTime)
+                if (dist <= 3f)
                 {
-                    Attack();
-                    print("atacando");
-                    nextAttackTime = Time.time + attackCooldown;
-                }
+                    if (Time.time >= nextAttackTime)
+                    {
+                        Attack();
+                        print("atacando");
+                        nextAttackTime = Time.time + attackCooldown;
+                    }
 
+                }
+                else
+                {
+                    MoveToPlayer();
+                }
             }
             else
             {
-                MoveToPlayer();
+                Patrol();
             }
         }
-        else
-        {
-            Patrol();
-        }
+        
 
         
     }
