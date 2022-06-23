@@ -18,7 +18,7 @@ public class ConversationClickDoor : MonoBehaviour
                 ConversationManager.Instance.StartConversation(semChave);
             }else if(PlayerController.instance.chave1 == true) {
                 ConversationManager.Instance.StartConversation(comChave);
-                Destroy(gameObject);
+                anim.SetTrigger("Open");
             }
         }
     }
