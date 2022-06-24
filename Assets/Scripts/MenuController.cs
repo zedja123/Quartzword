@@ -10,6 +10,7 @@ public class MenuController : MonoBehaviour
     public GameObject mainMenu;
     public GameObject pauseMenu;
     public GameObject deathMenu;
+    public GameObject controlMenu;
     public GameObject cameraMenu;
     public AudioSource menuMusic;
     public AudioSource gameMusic;
@@ -51,6 +52,7 @@ public class MenuController : MonoBehaviour
         mainMenu.SetActive(true);
         pauseMenu.SetActive(false);
         deathMenu.SetActive(false);
+        controlMenu.SetActive(false);
         
     }
 
@@ -59,6 +61,20 @@ public class MenuController : MonoBehaviour
         InitializeMenu();
         SceneManager.LoadScene(0);
         Time.timeScale = 1;
+    }
+
+    public void ChangeToMainMenu()
+    {
+        mainMenu.SetActive(true);
+        pauseMenu.SetActive(false);
+        deathMenu.SetActive(false);
+        controlMenu.SetActive(false);
+    }
+
+    public void LoadControlMenu()
+    {
+        mainMenu.SetActive(false);
+        controlMenu.SetActive(true);
     }
 
     public void LoadScene(string _scene)
