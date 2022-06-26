@@ -5,7 +5,7 @@ using UnityEngine;
 public class OnDestroy4 : MonoBehaviour
 {
     public GameObject barreira;
-    public OpenDoor door;
+    public destructible door;
     public DamageCalc damageCalc;
     // Start is called before the first frame update
     void Start()
@@ -21,7 +21,7 @@ public class OnDestroy4 : MonoBehaviour
             PZ3.instance.balista2 = true;
             PZ3.instance.PZ3Open();
             Destroy(barreira);
-            door.OpenDoor1();
+            door.Destructible();
         }
     }
 }

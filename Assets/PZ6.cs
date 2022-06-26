@@ -5,7 +5,7 @@ using UnityEngine;
 public class PZ6 : MonoBehaviour
 {
     public static PZ6 instance;
-    public OpenDoor door;
+    public destructible door;
 
     private void Awake()
     {
@@ -25,6 +25,6 @@ public class PZ6 : MonoBehaviour
 
     public void PZ6Open()
     {
-        door.OpenDoor1();
+        door.Destructible();
     }
 }

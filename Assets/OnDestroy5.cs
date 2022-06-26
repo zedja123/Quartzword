@@ -5,7 +5,7 @@ using UnityEngine;
 public class OnDestroy5 : MonoBehaviour
 {
 
-    public OpenDoor door;
+    public destructible door;
     public DamageCalc damageCalc;
     // Start is called before the first frame update
     void Start()
@@ -18,7 +18,7 @@ public class OnDestroy5 : MonoBehaviour
     {
         if (damageCalc.dead == true)
         {
-            door.OpenDoor1();
+            door.Destructible();
         }
     }
 

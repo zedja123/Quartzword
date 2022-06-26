@@ -6,7 +6,7 @@ public class PZ3 : MonoBehaviour
 {
     public bool balista1;
     public bool balista2;
-    public OpenDoor door;
+    public destructible door;
 
     public static PZ3 instance;
 
@@ -31,7 +31,7 @@ public class PZ3 : MonoBehaviour
     {
         if (balista1 && balista2)
         {
-            door.OpenDoor1();
+            door.Destructible();
         }
     }
 }

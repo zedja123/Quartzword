@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PZ2 : MonoBehaviour
 {
-    public OpenDoor door;
+    public destructible door;
     public bool sino;
 
     public static PZ2 instance;
@@ -28,7 +28,7 @@ public class PZ2 : MonoBehaviour
     {
         if (sino)
         {
-            door.OpenDoor1();
+            door.Destructible();
         }
     }
 }
