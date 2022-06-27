@@ -17,9 +17,7 @@ public class OnDestroy4 : MonoBehaviour
     void Update()
     {
         if (damageCalc.dead == true)
-        {
-            PZ3.instance.balista2 = true;
-            PZ3.instance.PZ3Open();
+        { 
             Destroy(barreira);
             door.Destructible();
         }
