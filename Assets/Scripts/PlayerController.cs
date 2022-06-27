@@ -59,7 +59,10 @@ public class PlayerController : MonoBehaviour
     }
     private void Update()
     {
-        Inputs();
+        if (canMove)
+        {
+            Inputs();
+        }
         Flip();
         Animations();
         //AddRemoveSword();

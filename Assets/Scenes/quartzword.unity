@@ -1296,7 +1296,7 @@ Transform:
   m_Children:
   - {fileID: 1035273182}
   m_Father: {fileID: 2093290153}
-  m_RootOrder: 183
+  m_RootOrder: 113
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &37996020
 Animator:
@@ -2572,7 +2572,7 @@ Transform:
   m_Children:
   - {fileID: 20547664}
   m_Father: {fileID: 2093290153}
-  m_RootOrder: 199
+  m_RootOrder: 141
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &57636301
 Animator:
@@ -11106,7 +11106,7 @@ Transform:
   m_Children:
   - {fileID: 1719435493}
   m_Father: {fileID: 2093290153}
-  m_RootOrder: 153
+  m_RootOrder: 71
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &381724251
 Animator:
@@ -20948,6 +20948,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 524035736}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: CanMoveTrue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   NodeID: 14
   TMPFont: {fileID: 0}
   Icon: {fileID: 0}
@@ -21213,7 +21225,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Event:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 524035736}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: CanMoveFalse
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   NodeID: 0
   TMPFont: {fileID: 0}
   Icon: {fileID: 0}
@@ -23244,7 +23268,7 @@ Transform:
   m_Children:
   - {fileID: 1456907893}
   m_Father: {fileID: 2093290153}
-  m_RootOrder: 198
+  m_RootOrder: 124
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &794282025
 Animator:
@@ -24393,7 +24417,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &824075786
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24420,14 +24444,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 7
-  json: "{\"Options\":[],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":2}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":-164.5,\"yPos\":22},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\xC9lazu
+  json: "{\"Options\":[],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":2}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":79,\"yPos\":22},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\xC9lazu
     \xE9 a filha mais velha da fam\xEDlia \xCDvoron, que fez sua fortuna na forja
-    de bioquartzo, um min\xE9rio com propriedades incr\xEDveis. \\n\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":null,\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":3}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-161.5,\"yPos\":139},\"ID\":2,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Um
+    de bioquartzo, um min\xE9rio com propriedades incr\xEDveis. \\n\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":null,\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":3}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":82,\"yPos\":139},\"ID\":2,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Um
     dia, \xC9lazu \xE9 mandada fazer uma entrega de uma arma forjada com bioquartzo.
     No caminho, ela \xE9 sequestrada pela M\xE3o de Quartzo, uma sociedade secreta
-    que trata o bioquartzo como um presente divino.\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":null,\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":4}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-157.5,\"yPos\":268},\"ID\":3,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Numa
+    que trata o bioquartzo como um presente divino.\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":null,\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":4}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":86,\"yPos\":268},\"ID\":3,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Numa
     tentativa de resistir, ela pega a arma para lutar contra os sequestradores, mas
-    falha. \",\"parentUIDs\":[2],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":null,\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-160.5,\"yPos\":404},\"ID\":4,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Ap\xF3s
+    falha. \",\"parentUIDs\":[2],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":null,\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":83,\"yPos\":404},\"ID\":4,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Ap\xF3s
     acordar, \xC9lazu se v\xEA trancada em uma cela, e tem um homem ao lado de fora
     a encarando.\",\"parentUIDs\":[3],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":null,\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0}]}"
   saveVersion: 110
@@ -38727,47 +38751,47 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 28
-  json: "{\"Options\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":4}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":597,\"yPos\":-663},\"ID\":1,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Porque
-    me sequestraram?\",\"parentUIDs\":[0],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":19}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":958,\"yPos\":-657},\"ID\":2,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Quem
-    \xE9 voc\xEA?\",\"parentUIDs\":[0],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":20}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":1257,\"yPos\":-661},\"ID\":3,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Onde
-    est\xE1 minha espada?\",\"parentUIDs\":[0],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":10}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-258,\"yPos\":-48},\"ID\":7,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"O
-    que voc\xEAs pretendem fazer se eu cooperar?\",\"parentUIDs\":[6,23,26],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":15}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":151,\"yPos\":-165},\"ID\":8,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Eu
-    n\xE3o posso ajudar voc\xEA...\",\"parentUIDs\":[6,23],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":10}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":504,\"yPos\":-175},\"ID\":9,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Pode
-    esperar sentado se voc\xEA acha que eu vou ajudar voc\xEA.\",\"parentUIDs\":[6,23],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":14}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-250,\"yPos\":397},\"ID\":12,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Nem
-    que porcos voem!\",\"parentUIDs\":[11],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":14}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":125,\"yPos\":388},\"ID\":13,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Eu
-    quero saber mais a respeito\u2026\",\"parentUIDs\":[11,26],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":14}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":218,\"yPos\":185},\"ID\":16,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Eu
-    sei que \xE9 incr\xEDvel, mas tem como eu n\xE3o saber sim...\",\"parentUIDs\":[15],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":14}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":501,\"yPos\":184},\"ID\":17,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Por
-    favor, eu estou falando a verdade. Me deixa ir embora.\",\"parentUIDs\":[15],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":25}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":1132,\"yPos\":-61},\"ID\":24,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Como
-    sua m\xE3o \xE9 de bioquartzo?\",\"parentUIDs\":[23],\"SpeechUID\":-1}],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":1},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":2},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":3}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":941,\"yPos\":-837},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Eu
+  json: "{\"Options\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":4}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":326,\"yPos\":-771},\"ID\":1,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Porque
+    me sequestraram?\",\"parentUIDs\":[0],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":19}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":687,\"yPos\":-765},\"ID\":2,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Quem
+    \xE9 voc\xEA?\",\"parentUIDs\":[0],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":20}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":986,\"yPos\":-769},\"ID\":3,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Onde
+    est\xE1 minha espada?\",\"parentUIDs\":[0],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":10}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-529,\"yPos\":-156},\"ID\":7,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"O
+    que voc\xEAs pretendem fazer se eu cooperar?\",\"parentUIDs\":[6,23,26],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":15}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-120,\"yPos\":-273},\"ID\":8,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Eu
+    n\xE3o posso ajudar voc\xEA...\",\"parentUIDs\":[6,23],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":14}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":233,\"yPos\":-283},\"ID\":9,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Pode
+    esperar sentado se voc\xEA acha que eu vou ajudar voc\xEA.\",\"parentUIDs\":[6,23],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":14}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-521,\"yPos\":289},\"ID\":12,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Nem
+    que porcos voem!\",\"parentUIDs\":[11],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":14}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-146,\"yPos\":280},\"ID\":13,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Eu
+    quero saber mais a respeito\u2026\",\"parentUIDs\":[11,26],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":14}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-53,\"yPos\":77},\"ID\":16,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Eu
+    sei que \xE9 incr\xEDvel, mas tem como eu n\xE3o saber sim...\",\"parentUIDs\":[15],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":14}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":230,\"yPos\":76},\"ID\":17,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Por
+    favor, eu estou falando a verdade. Me deixa ir embora.\",\"parentUIDs\":[15],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":25}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":861,\"yPos\":-169},\"ID\":24,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Como
+    sua m\xE3o \xE9 de bioquartzo?\",\"parentUIDs\":[23],\"SpeechUID\":-1}],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":1},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":2},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":3}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":670,\"yPos\":-945},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Eu
     pe\xE7o desculpas pela abordagem feita pelos que te sequestraram, mas n\xE3o
-    havia forma mais eficiente de te trazer at\xE9 aqui.\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Carcereiro\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":5}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":373,\"yPos\":-549},\"ID\":4,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Nossa
+    havia forma mais eficiente de te trazer at\xE9 aqui.\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Carcereiro\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":5}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":102,\"yPos\":-657},\"ID\":4,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Nossa
     organiza\xE7\xE3o est\xE1 se preparando para mudar o mundo, mas h\xE1 uma amea\xE7a
-    que pode nos comprometer totalmente.\\r\",\"parentUIDs\":[1],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":null,\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":6}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":297,\"yPos\":-421},\"ID\":5,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Sabemos
+    que pode nos comprometer totalmente.\\r\",\"parentUIDs\":[1],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":null,\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":6}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":26,\"yPos\":-529},\"ID\":5,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Sabemos
     quem voc\xEA \xE9, e a que fam\xEDlia pertence. Os \xCDvoron s\xE3o conhecidos
     em toda a regi\xE3o por terem conseguido neutralizar o efeito simbi\xF3tico do
-    bioquartzo, e tenho que dizer que isso n\xE3o \xE9 nada menos do que impressionante.\\r\\n\\r\",\"parentUIDs\":[4,19],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":null,\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":7},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":8},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":9}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":274,\"yPos\":-296},\"ID\":6,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"A
+    bioquartzo, e tenho que dizer que isso n\xE3o \xE9 nada menos do que impressionante.\\r\\n\\r\",\"parentUIDs\":[4,19],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":null,\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":7},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":8},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":9}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":3,\"yPos\":-404},\"ID\":6,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"A
     quest\xE3o que fica \xE9: Voc\xEA pode nos revelar da maneira f\xE1cil ou da
-    maneira dif\xEDcil. A escolha \xE9 sua.\",\"parentUIDs\":[5],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":null,\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":11}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":0,\"yPos\":7},\"ID\":10,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Nosso
+    maneira dif\xEDcil. A escolha \xE9 sua.\",\"parentUIDs\":[5],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":null,\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":11}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-271,\"yPos\":-101},\"ID\":10,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Nosso
     mestre acredita que a ra\xE7a humana como \xE9 atualmente est\xE1 \u201Cultrapassada\u201D,
     e quer mostrar os benef\xEDcios que a simbiose com o bioquartzo pode proporcionar
-    a todos.\\r\",\"parentUIDs\":[7,9],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":null,\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":12},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":13}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-19,\"yPos\":191},\"ID\":11,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\\rEle
+    a todos.\\r\",\"parentUIDs\":[7],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":null,\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":12},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":13}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-290,\"yPos\":83},\"ID\":11,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\\rEle
     quer que todos se tornem hospedeiros, e n\xE3o aceitar\xE1 obje\xE7\xF5es.\\r\\n\\r\\nSabendo
-    disso, voc\xEA ir\xE1 ou n\xE3o nos ajudar?\",\"parentUIDs\":[10],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":null,\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":365,\"yPos\":586},\"ID\":14,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Pois
-    bem. Foi voc\xEA quem escolheu esse caminho.\",\"parentUIDs\":[12,13,16,17],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":null,\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":16},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":17}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":331,\"yPos\":-5},\"ID\":15,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Como
+    disso, voc\xEA ir\xE1 ou n\xE3o nos ajudar?\",\"parentUIDs\":[10],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":null,\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":95,\"yPos\":478},\"ID\":14,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Pois
+    bem. Foi voc\xEA quem escolheu esse caminho.\",\"parentUIDs\":[9,12,13,16,17],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":null,\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":16},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":17}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":60,\"yPos\":-113},\"ID\":15,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Como
     \\\"n\xE3o pode\\\" nos ajudar!?\\r\\n\\r\\nVoc\xEA \xE9 a primog\xEAnita de
     D\xE9dalo \xCDvoron, atual chefe da casa. N\xE3o tem como voc\xEA n\xE3o saber
-    os segredos da forja da sua fam\xEDlia.\",\"parentUIDs\":[8],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":null,\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":5}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":972,\"yPos\":-502},\"ID\":19,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"N\xE3o
-    importa quem eu sou. O que importa aqui \xE9 quem \xE9 voc\xEA.\\r\",\"parentUIDs\":[2],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":null,\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":22}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":1336,\"yPos\":-486},\"ID\":20,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Sua
+    os segredos da forja da sua fam\xEDlia.\",\"parentUIDs\":[8],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":null,\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":5}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":701,\"yPos\":-610},\"ID\":19,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"N\xE3o
+    importa quem eu sou. O que importa aqui \xE9 quem \xE9 voc\xEA.\\r\",\"parentUIDs\":[2],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":null,\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":22}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":1065,\"yPos\":-594},\"ID\":20,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Sua
     espada me intrigou. Eu a toquei com minha m\xE3o de bioquartzo, mas ela n\xE3o
     foi absorvida mesmo depois de eu ter cancelado o efeito neutralizador do material.
-    Eu me pergunto o porqu\xEA\u2026\\r\",\"parentUIDs\":[3],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":null,\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":23}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":1328,\"yPos\":-330},\"ID\":22,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Bom,
+    Eu me pergunto o porqu\xEA\u2026\\r\",\"parentUIDs\":[3],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":null,\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":23}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":1057,\"yPos\":-438},\"ID\":22,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Bom,
     isso n\xE3o importa muito agora. N\xF3s teremos muito tempo para descobrir a
-    raz\xE3o, ainda mais tendo sua coopera\xE7\xE3o.\\r\",\"parentUIDs\":[20],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":null,\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":9},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":8},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":7},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":24}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":1318,\"yPos\":-187},\"ID\":23,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"A
+    raz\xE3o, ainda mais tendo sua coopera\xE7\xE3o.\\r\",\"parentUIDs\":[20],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":null,\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":9},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":8},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":7},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":24}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":1047,\"yPos\":-295},\"ID\":23,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"A
     quest\xE3o que fica \xE9: Voc\xEA pode nos revelar da maneira f\xE1cil ou da
-    maneira dif\xEDcil. A escolha \xE9 sua.\",\"parentUIDs\":[22],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":null,\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":26}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":1018,\"yPos\":47},\"ID\":25,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"O
+    maneira dif\xEDcil. A escolha \xE9 sua.\",\"parentUIDs\":[22],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":null,\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":26}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":747,\"yPos\":-61},\"ID\":25,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"O
     bioquartzo \xE9 bem mais que um simples min\xE9rio. A verdade \xE9 que o bioquartzo
     \xE9 um simbionte que precisa de um hospedeiro para viver plenamente. Em troca,
-    o simbionte \xE9 capaz de mudar a sua forma em favor do hospedeiro.\\r\",\"parentUIDs\":[24],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":null,\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":7},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":13}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":1076,\"yPos\":203},\"ID\":26,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\\rO
+    o simbionte \xE9 capaz de mudar a sua forma em favor do hospedeiro.\\r\",\"parentUIDs\":[24],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":null,\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":7},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":13}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":805,\"yPos\":95},\"ID\":26,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\\rO
     nosso mestre descobriu isso e fundou a M\xE3o de Quartzo para estudar esses fen\xF4menos
     relativos ao simbionte. A \xFAnica coisa que n\xF3s n\xE3o sabemos \xE9 como
     voc\xEAs conseguiram neutralizar o efeito biol\xF3gico do simbionte, e voc\xEA
@@ -38823,6 +38847,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 524035736}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: CanMoveTrue
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -51154,7 +51190,7 @@ Transform:
   m_Children:
   - {fileID: 312186757}
   m_Father: {fileID: 2093290153}
-  m_RootOrder: 200
+  m_RootOrder: 143
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1810726619
 Animator:
@@ -58476,6 +58512,7 @@ Transform:
   - {fileID: 990510272}
   - {fileID: 1018017990}
   - {fileID: 2123931713}
+  - {fileID: 381724250}
   - {fileID: 357695278}
   - {fileID: 330305063}
   - {fileID: 101672762}
@@ -58517,6 +58554,7 @@ Transform:
   - {fileID: 1571607523}
   - {fileID: 124462916}
   - {fileID: 1651945351}
+  - {fileID: 37996019}
   - {fileID: 1086962998}
   - {fileID: 1700839960}
   - {fileID: 294439419}
@@ -58527,6 +58565,7 @@ Transform:
   - {fileID: 665080381}
   - {fileID: 2145381428}
   - {fileID: 1816526296}
+  - {fileID: 794282024}
   - {fileID: 36470985}
   - {fileID: 1120174366}
   - {fileID: 1805359215}
@@ -58543,8 +58582,9 @@ Transform:
   - {fileID: 1098208709}
   - {fileID: 1398679287}
   - {fileID: 1940572850}
-  - {fileID: 1112817943}
+  - {fileID: 57636300}
   - {fileID: 547586717}
+  - {fileID: 1810726618}
   - {fileID: 844098286}
   - {fileID: 1224146059}
   - {fileID: 1353466719}
@@ -58558,13 +58598,12 @@ Transform:
   - {fileID: 910860569}
   - {fileID: 504534231}
   - {fileID: 968308216}
-  - {fileID: 381724250}
   - {fileID: 396686292}
+  - {fileID: 1112817943}
   - {fileID: 2044868928}
   - {fileID: 1869840050}
   - {fileID: 1384023867}
   - {fileID: 609185488}
-  - {fileID: 651782586}
   - {fileID: 1268743762}
   - {fileID: 36884457}
   - {fileID: 70663868}
@@ -58573,6 +58612,7 @@ Transform:
   - {fileID: 1326197793}
   - {fileID: 604253871}
   - {fileID: 712584640}
+  - {fileID: 651782586}
   - {fileID: 615111275}
   - {fileID: 566094160}
   - {fileID: 448520902}
@@ -58588,7 +58628,6 @@ Transform:
   - {fileID: 1022351799}
   - {fileID: 2079424510}
   - {fileID: 1258438348}
-  - {fileID: 37996019}
   - {fileID: 1542692129}
   - {fileID: 149366792}
   - {fileID: 643310446}
@@ -58603,27 +58642,24 @@ Transform:
   - {fileID: 2050672221}
   - {fileID: 834065058}
   - {fileID: 1430257586}
-  - {fileID: 794282024}
-  - {fileID: 57636300}
-  - {fileID: 1810726618}
   - {fileID: 1374507943}
   - {fileID: 2025735063}
   - {fileID: 1511079776}
   - {fileID: 164118126}
   - {fileID: 783473428}
+  - {fileID: 808737615}
   - {fileID: 1518442278}
   - {fileID: 43163532}
   - {fileID: 2113251711}
-  - {fileID: 808737615}
+  - {fileID: 1354272803}
+  - {fileID: 365349059}
+  - {fileID: 1761351615}
   - {fileID: 453025999}
   - {fileID: 2680095}
   - {fileID: 179662630}
   - {fileID: 137670970}
   - {fileID: 323599862}
-  - {fileID: 1354272803}
   - {fileID: 636215438}
-  - {fileID: 365349059}
-  - {fileID: 1761351615}
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -60060,7 +60096,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919132149149885939}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -45, y: 38.92, z: 35.61}
+  m_LocalPosition: {x: -45, y: 15.88, z: 89.49}
   m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_Children:
   - {fileID: 1317899360}
@@ -61883,11 +61919,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6202281147933137794, guid: 26c21228d016ba546a14fd47a057c0e3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 40.38
+      value: 17.340004
       objectReference: {fileID: 0}
     - target: {fileID: 6202281147933137794, guid: 26c21228d016ba546a14fd47a057c0e3, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 41.47
+      value: 101.86
       objectReference: {fileID: 0}
     - target: {fileID: 6202281147933137794, guid: 26c21228d016ba546a14fd47a057c0e3, type: 3}
       propertyPath: m_LocalRotation.w
@@ -61927,7 +61963,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6202281147933137795, guid: 26c21228d016ba546a14fd47a057c0e3, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6202281147933137804, guid: 26c21228d016ba546a14fd47a057c0e3, type: 3}
       propertyPath: m_Constraints
